@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
 Hello my name is justin
+=======
+AAAAAAAAAAA
+>>>>>>> Stashed changes
 Abrakadabra
 Magic
