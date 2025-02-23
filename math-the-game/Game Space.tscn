@@ -1,0 +1,113 @@
+[gd_scene load_steps=3 format=3 uid="uid://ppcxg1xh1lwl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ve0ih"]
+bg_color = Color(0, 0, 0, 0.482353)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rnrn3"]
+bg_color = Color(0.344076, 0.344076, 0.344076, 0.247059)
+
+[node name="Scene" type="CanvasLayer"]
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -430.0
+offset_top = -339.0
+offset_right = 430.0
+offset_bottom = 460.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 60
+vertical = true
+
+[node name="The problem" type="MarginContainer" parent="BoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="BoxContainer/The problem"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/The problem"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 340
+
+[node name="Panel2" type="Panel" parent="BoxContainer/The problem/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="Question" type="MarginContainer" parent="BoxContainer/The problem"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Problem window" type="Panel" parent="BoxContainer/The problem/Question"]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rnrn3")
+
+[node name="Problem goes here" type="CenterContainer" parent="BoxContainer/The problem/Question"]
+layout_mode = 2
+
+[node name="Text of the problem" type="Label" parent="BoxContainer/The problem/Question/Problem goes here"]
+custom_minimum_size = Vector2(820, 300)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Вы любіце ружы?
+А я на іх сраў.
+Краіне патрэбныя паравозы,
+Нам патрэбны метал!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Answer options" type="VBoxContainer" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="Y-Button" type="MarginContainer" parent="BoxContainer/Answer options"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Panel" type="Panel" parent="BoxContainer/Answer options/Y-Button"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/Answer options"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="X-Button" type="Panel" parent="BoxContainer/Answer options/HBoxContainer"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="B-Button" type="Panel" parent="BoxContainer/Answer options/HBoxContainer"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="MarginContainer2" type="MarginContainer" parent="BoxContainer/Answer options"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="A-Button" type="Panel" parent="BoxContainer/Answer options/MarginContainer2"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
