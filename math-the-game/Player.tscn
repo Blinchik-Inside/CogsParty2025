@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm0x4xvvojps2"]
+
+[ext_resource type="Script" uid="uid://duhbsdsr1lvw0" path="res://Player.cs" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://syy705w5y5ic" path="res://Assets/birdbody.png" id="1_xhfnw"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_kpjcp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.358744, 0.358744)
+texture = ExtResource("1_xhfnw")

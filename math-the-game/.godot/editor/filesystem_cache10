@@ -1,7 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1743380154
-Game Space.tscn::PackedScene::1083961184487148099::1743380130::0::1::::<><><>0<>0<><>::uid://dybwtoux765x::::res://GameSpace.cs
-GameSpace.cs::CSharpScript::260212621981859327::1743380130::0::1::::<>CanvasLayer<><>0<>0<><>::
-main.tscn::PackedScene::6805010235454207162::1743380130::0::1::::<><><>0<>0<><>::
-::res://problems/::1743380130
+::res://::1743973360
+Game Space.tscn::PackedScene::1083961184487148099::1743973099::0::1::::<><><>0<>0<><>::uid://dybwtoux765x::::res://GameSpace.cs
+GameSpace.cs::CSharpScript::260212621981859327::1743972900::0::1::::<>CanvasLayer<><>0<>0<><>::
+icon.svg::CompressedTexture2D::9032577375382498190::1743973360::1743973361::1::::<><><>0<>0<>6e448d986eb7c4c507a06a256043a12a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main.tscn::PackedScene::6805010235454207162::1743973099::0::1::::<><><>0<>0<><>::
+Player.tscn::PackedScene::8054587138895227203::1743973304::0::1::::<><><>0<>0<><>::uid://duhbsdsr1lvw0::::res://Player.cs<>uid://syy705w5y5ic::::res://Assets/birdbody.png
+Player.cs::CSharpScript::8577582615585558129::1743972967::0::1::::<>Node2D<><>0<>0<><>::
+::res://Assets/::1743973264
+birdbody.png::CompressedTexture2D::1314459965281903082::1739733084::1743971041::1::::<><><>0<>0<>55c1b0dca24f96493b9d5ee9df67e559<>res://.godot/imported/birdbody.png-c2dec770acaec50075df0412470c9734.ctex::
+::res://problems/::1743380169
 1.png::CompressedTexture2D/CompressedTexture2D::9012617538546790828::1743380130::1743380156::1::::<><><>0<>0<>48469d73ef0db6c07f4dcd363c5330a3<>res://.godot/imported/1.png-93a7db44dec10d125d0c6cac2a011210.ctex::
