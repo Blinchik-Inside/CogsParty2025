@@ -3,11 +3,15 @@ using System;
 
 public partial class Player : Node2D
 {
-    // int score;
-    bool answerGiven;
+    private int score;
+    private bool answerGiven;
+
+    // [Signal]
+    // public delegate void AnswerChosenEventHandler(char button);
     
     public override void _Ready(){
         GD.Print("Game started.");
+        score = 0;
         answerGiven = false;
     }
 
@@ -16,6 +20,7 @@ public partial class Player : Node2D
             // Answer Y chosen. 
             GD.Print("Answer Y chosen!");
             answerGiven = true;
+            // EmitSignal(SignalName.AnswerChosenEventHandler, 'Y');
         }
         
         if (Input.IsActionPressed("pressX") && !answerGiven){
@@ -36,4 +41,12 @@ public partial class Player : Node2D
             answerGiven = true;
         }
 	}
+
+    public void addPoints(){
+        score += 10;
+    }
+
+    public int getScore(){
+        return score;
+    }
 }
