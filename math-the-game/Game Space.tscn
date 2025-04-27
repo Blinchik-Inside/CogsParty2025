@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ppcxg1xh1lwl"]
+[gd_scene load_steps=6 format=3 uid="uid://ppcxg1xh1lwl"]
 
 [ext_resource type="Script" uid="uid://dybwtoux765x" path="res://GameSpace.cs" id="1_5ewhj"]
+[ext_resource type="FontFile" uid="uid://baupkq66bjfmy" path="res://Assets/comic.ttf" id="2_mw21s"]
+[ext_resource type="PackedScene" uid="uid://dm0x4xvvojps2" path="res://Player.tscn" id="3_6oj4c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ve0ih"]
 bg_color = Color(0, 0, 0, 0.482353)
@@ -16,6 +18,12 @@ bg_color = Color(0.344076, 0.344076, 0.344076, 0.247059)
 [node name="Scene" type="CanvasLayer"]
 script = ExtResource("1_5ewhj")
 ProblemContPath = NodePath("BoxContainer/The problem/Question/Problem goes here/ProblemContainer")
+TimerLabelPath = NodePath("BoxContainer/Timer")
+TimerNodePath = NodePath("BoxContainer/Timer/Timer")
+Player1NodePath = NodePath("Player1")
+Player2NodePath = NodePath("Player2")
+Player3NodePath = NodePath("Player3")
+Player4NodePath = NodePath("Player4")
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 anchors_preset = 8
@@ -24,13 +32,25 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -430.0
-offset_top = -339.0
+offset_top = -475.0
 offset_right = 430.0
-offset_bottom = 460.0
+offset_bottom = 387.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 60
 vertical = true
+
+[node name="Timer" type="Label" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_mw21s")
+theme_override_font_sizes/font_size = 40
+text = "0:15"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="BoxContainer/Timer"]
+autostart = true
 
 [node name="The problem" type="MarginContainer" parent="BoxContainer"]
 layout_mode = 2
@@ -121,3 +141,22 @@ size_flags_horizontal = 4
 custom_minimum_size = Vector2(350, 75)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="Player1" parent="." instance=ExtResource("3_6oj4c")]
+position = Vector2(130, 930)
+scale = Vector2(0.42, 0.42)
+
+[node name="Player2" parent="." instance=ExtResource("3_6oj4c")]
+process_mode = 4
+position = Vector2(420, 930)
+scale = Vector2(0.42, 0.42)
+
+[node name="Player3" parent="." instance=ExtResource("3_6oj4c")]
+process_mode = 4
+position = Vector2(1500, 930)
+scale = Vector2(0.42, 0.42)
+
+[node name="Player4" parent="." instance=ExtResource("3_6oj4c")]
+process_mode = 4
+position = Vector2(1790, 930)
+scale = Vector2(0.42, 0.42)

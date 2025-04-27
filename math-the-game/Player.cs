@@ -1,17 +1,18 @@
 using Godot;
-using System;
 
 public partial class Player : Node2D
 {
     private int score;
     private bool answerGiven;
 
-    // [Signal]
-    // public delegate void AnswerChosenEventHandler(char button);
+    [Export] private NodePath PlayerScorePath;
+
+    [Signal] public delegate void AnswerChosenEventHandler(char button);
     
     public override void _Ready(){
         GD.Print("Game started.");
         score = 0;
+        GetNode<Label>(PlayerScorePath).Text = score.ToString();
         answerGiven = false;
     }
 
@@ -20,25 +21,28 @@ public partial class Player : Node2D
             // Answer Y chosen. 
             GD.Print("Answer Y chosen!");
             answerGiven = true;
-            // EmitSignal(SignalName.AnswerChosenEventHandler, 'Y');
+            EmitSignal(SignalName.AnswerChosen, 'Y');
         }
         
         if (Input.IsActionPressed("pressX") && !answerGiven){
-            // Answer Y chosen. 
+            // Answer X chosen. 
             GD.Print("Answer X chosen!");
             answerGiven = true;
+            EmitSignal(SignalName.AnswerChosen, 'X');
         }
 
         if (Input.IsActionPressed("pressB") && !answerGiven){
-            // Answer Y chosen. 
+            // Answer B chosen. 
             GD.Print("Answer B chosen!");
             answerGiven = true;
+            EmitSignal(SignalName.AnswerChosen, 'B');
         }
 
         if (Input.IsActionPressed("pressA") && !answerGiven){
-            // Answer Y chosen. 
+            // Answer A chosen. 
             GD.Print("Answer A chosen!");
             answerGiven = true;
+            EmitSignal(SignalName.AnswerChosen, 'A');
         }
 	}
 
@@ -48,5 +52,9 @@ public partial class Player : Node2D
 
     public int getScore(){
         return score;
+    }
+
+    public void resetAnswerGiven(){
+        answerGiven = false;
     }
 }

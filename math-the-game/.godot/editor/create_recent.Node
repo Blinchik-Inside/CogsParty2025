@@ -1,10 +1,11 @@
-Sprite2D
+BoxContainer
+VBoxContainer
+Label
 Timer
+Sprite2D
 CanvasLayer
 TextureRect
 CenterContainer
 MarginContainer
 Panel
 HBoxContainer
-VBoxContainer
-BoxContainer
