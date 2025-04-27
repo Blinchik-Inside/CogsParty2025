@@ -15,7 +15,7 @@ border_color = Color(1, 1, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rnrn3"]
 bg_color = Color(0.344076, 0.344076, 0.344076, 0.247059)
 
-[node name="Scene" type="CanvasLayer"]
+[node name="GameSpace" type="CanvasLayer"]
 script = ExtResource("1_5ewhj")
 ProblemContPath = NodePath("BoxContainer/The problem/Question/Problem goes here/ProblemContainer")
 TimerLabelPath = NodePath("BoxContainer/Timer")
@@ -24,6 +24,11 @@ Player1NodePath = NodePath("Player1")
 Player2NodePath = NodePath("Player2")
 Player3NodePath = NodePath("Player3")
 Player4NodePath = NodePath("Player4")
+ProblemLabelPath = NodePath("BoxContainer/The problem/MarginContainer/Panel2/Problem label")
+AnswerYPath = NodePath("BoxContainer/Answer options/Y-Button/Panel/HBoxContainer/BoxContainer/Y-button answer")
+AnswerXPath = NodePath("BoxContainer/Answer options/HBoxContainer/X-Button/Panel/HBoxContainer/BoxContainer/X-button answer")
+AnswerBPath = NodePath("BoxContainer/Answer options/HBoxContainer/B-Button/Panel/HBoxContainer/BoxContainer/B-button answer")
+AnswerAPath = NodePath("BoxContainer/Answer options/MarginContainer/A-Button/Panel/HBoxContainer/BoxContainer/A-button answer")
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 anchors_preset = 8
@@ -68,6 +73,20 @@ theme_override_constants/margin_bottom = 340
 [node name="Panel2" type="Panel" parent="BoxContainer/The problem/MarginContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="Problem label" type="Label" parent="BoxContainer/The problem/MarginContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -28.5
+offset_right = 314.0
+offset_bottom = 28.5
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_mw21s")
+theme_override_font_sizes/font_size = 40
+text = "Problem number"
 
 [node name="Question" type="MarginContainer" parent="BoxContainer/The problem"]
 layout_mode = 2
@@ -117,30 +136,218 @@ custom_minimum_size = Vector2(350, 75)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
 
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/Answer options/Y-Button/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Panel" type="Panel" parent="BoxContainer/Answer options/Y-Button/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="Y" type="Label" parent="BoxContainer/Answer options/Y-Button/Panel/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -28.5
+offset_right = 12.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_mw21s")
+theme_override_font_sizes/font_size = 50
+text = "Y"
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/Answer options/Y-Button/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Y-button answer" type="Label" parent="BoxContainer/Answer options/Y-Button/Panel/HBoxContainer/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_mw21s")
+theme_override_font_sizes/font_size = 35
+text = "correct one"
+
 [node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/Answer options"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = 40
 
-[node name="X-Button" type="Panel" parent="BoxContainer/Answer options/HBoxContainer"]
-custom_minimum_size = Vector2(350, 75)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
-
-[node name="B-Button" type="Panel" parent="BoxContainer/Answer options/HBoxContainer"]
-custom_minimum_size = Vector2(350, 75)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
-
-[node name="MarginContainer2" type="MarginContainer" parent="BoxContainer/Answer options"]
+[node name="X-Button" type="MarginContainer" parent="BoxContainer/Answer options/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="A-Button" type="Panel" parent="BoxContainer/Answer options/MarginContainer2"]
+[node name="Panel" type="Panel" parent="BoxContainer/Answer options/HBoxContainer/X-Button"]
 custom_minimum_size = Vector2(350, 75)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/Answer options/HBoxContainer/X-Button/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Panel" type="Panel" parent="BoxContainer/Answer options/HBoxContainer/X-Button/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="X" type="Label" parent="BoxContainer/Answer options/HBoxContainer/X-Button/Panel/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -28.5
+offset_right = 12.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_mw21s")
+theme_override_font_sizes/font_size = 50
+text = "X"
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/Answer options/HBoxContainer/X-Button/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="X-button answer" type="Label" parent="BoxContainer/Answer options/HBoxContainer/X-Button/Panel/HBoxContainer/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_mw21s")
+theme_override_font_sizes/font_size = 35
+text = "wrong"
+
+[node name="B-Button" type="MarginContainer" parent="BoxContainer/Answer options/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Panel" type="Panel" parent="BoxContainer/Answer options/HBoxContainer/B-Button"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/Answer options/HBoxContainer/B-Button/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Panel" type="Panel" parent="BoxContainer/Answer options/HBoxContainer/B-Button/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="B" type="Label" parent="BoxContainer/Answer options/HBoxContainer/B-Button/Panel/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -28.5
+offset_right = 12.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_mw21s")
+theme_override_font_sizes/font_size = 50
+text = "B"
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/Answer options/HBoxContainer/B-Button/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="B-button answer" type="Label" parent="BoxContainer/Answer options/HBoxContainer/B-Button/Panel/HBoxContainer/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_mw21s")
+theme_override_font_sizes/font_size = 35
+text = "wrong"
+
+[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/Answer options"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="A-Button" type="MarginContainer" parent="BoxContainer/Answer options/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Panel" type="Panel" parent="BoxContainer/Answer options/MarginContainer/A-Button"]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/Answer options/MarginContainer/A-Button/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Panel" type="Panel" parent="BoxContainer/Answer options/MarginContainer/A-Button/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
+
+[node name="A" type="Label" parent="BoxContainer/Answer options/MarginContainer/A-Button/Panel/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -28.5
+offset_right = 12.5
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = ExtResource("2_mw21s")
+theme_override_font_sizes/font_size = 50
+text = "A"
+
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/Answer options/MarginContainer/A-Button/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="A-button answer" type="Label" parent="BoxContainer/Answer options/MarginContainer/A-Button/Panel/HBoxContainer/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_mw21s")
+theme_override_font_sizes/font_size = 35
+text = "wrong"
 
 [node name="Player1" parent="." instance=ExtResource("3_6oj4c")]
 position = Vector2(130, 930)
@@ -153,10 +360,12 @@ scale = Vector2(0.42, 0.42)
 
 [node name="Player3" parent="." instance=ExtResource("3_6oj4c")]
 process_mode = 4
+visible = false
 position = Vector2(1500, 930)
 scale = Vector2(0.42, 0.42)
 
 [node name="Player4" parent="." instance=ExtResource("3_6oj4c")]
 process_mode = 4
+visible = false
 position = Vector2(1790, 930)
 scale = Vector2(0.42, 0.42)

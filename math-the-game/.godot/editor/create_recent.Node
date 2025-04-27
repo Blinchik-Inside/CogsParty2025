@@ -1,6 +1,7 @@
 BoxContainer
-VBoxContainer
 Label
+HBoxContainer
+VBoxContainer
 Timer
 Sprite2D
 CanvasLayer
@@ -8,4 +9,3 @@ TextureRect
 CenterContainer
 MarginContainer
 Panel
-HBoxContainer
