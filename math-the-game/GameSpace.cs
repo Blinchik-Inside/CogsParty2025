@@ -36,7 +36,7 @@ public partial class GameSpace : CanvasLayer
 		correctAnswer = 'Y'; // TODO: Set the correct answer for each respective problem
 		problemsSolved = 0;
 
-		secondsLeft = 15;
+		secondsLeft = 10; // Optional todo: Set different timer for each respective problem
 		GetNode<Label>(TimerLabelPath).Text = timerToString();
 		setProblemLabel("Game Test Problem"); // TODO: Set the problem type for each respective problem
 

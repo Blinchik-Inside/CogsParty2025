@@ -28,7 +28,7 @@ ProblemLabelPath = NodePath("BoxContainer/The problem/MarginContainer/Panel2/Pro
 AnswerYPath = NodePath("BoxContainer/Answer options/Y-Button/Panel/HBoxContainer/BoxContainer/Y-button answer")
 AnswerXPath = NodePath("BoxContainer/Answer options/HBoxContainer/X-Button/Panel/HBoxContainer/BoxContainer/X-button answer")
 AnswerBPath = NodePath("BoxContainer/Answer options/HBoxContainer/B-Button/Panel/HBoxContainer/BoxContainer/B-button answer")
-AnswerAPath = NodePath("BoxContainer/Answer options/MarginContainer/A-Button/Panel/HBoxContainer/BoxContainer/A-button answer")
+AnswerAPath = NodePath("BoxContainer/Answer options/A-Button/Panel/HBoxContainer/BoxContainer/A-button answer")
 
 [node name="BoxContainer" type="BoxContainer" parent="."]
 anchors_preset = 8
@@ -292,20 +292,16 @@ theme_override_fonts/font = ExtResource("2_mw21s")
 theme_override_font_sizes/font_size = 35
 text = "wrong"
 
-[node name="MarginContainer" type="MarginContainer" parent="BoxContainer/Answer options"]
+[node name="A-Button" type="MarginContainer" parent="BoxContainer/Answer options"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="A-Button" type="MarginContainer" parent="BoxContainer/Answer options/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="Panel" type="Panel" parent="BoxContainer/Answer options/MarginContainer/A-Button"]
+[node name="Panel" type="Panel" parent="BoxContainer/Answer options/A-Button"]
 custom_minimum_size = Vector2(350, 75)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/Answer options/MarginContainer/A-Button/Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/Answer options/A-Button/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -314,12 +310,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
 
-[node name="Panel" type="Panel" parent="BoxContainer/Answer options/MarginContainer/A-Button/Panel/HBoxContainer"]
+[node name="Panel" type="Panel" parent="BoxContainer/Answer options/A-Button/Panel/HBoxContainer"]
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ve0ih")
 
-[node name="A" type="Label" parent="BoxContainer/Answer options/MarginContainer/A-Button/Panel/HBoxContainer/Panel"]
+[node name="A" type="Label" parent="BoxContainer/Answer options/A-Button/Panel/HBoxContainer/Panel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -337,12 +333,12 @@ theme_override_fonts/font = ExtResource("2_mw21s")
 theme_override_font_sizes/font_size = 50
 text = "A"
 
-[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/Answer options/MarginContainer/A-Button/Panel/HBoxContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="BoxContainer/Answer options/A-Button/Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="A-button answer" type="Label" parent="BoxContainer/Answer options/MarginContainer/A-Button/Panel/HBoxContainer/BoxContainer"]
+[node name="A-button answer" type="Label" parent="BoxContainer/Answer options/A-Button/Panel/HBoxContainer/BoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_mw21s")
