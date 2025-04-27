@@ -29,14 +29,9 @@ public partial class GameSpace : CanvasLayer
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready() {
-		var texturePath= "res://problems/1.png"; // TODO: Set the texture path for each respective problem
-		var texture2d = (Texture2D) GD.Load(texturePath);
-		GetNode<TextureRect>(ProblemContPath).Texture = texture2d;
-
-		correctAnswer = 'Y'; // TODO: Set the correct answer for each respective problem
 		problemsSolved = 0;
+		setUpTheScreen();
 
-		secondsLeft = 10; // Optional todo: Set different timer for each respective problem
 		GetNode<Label>(TimerLabelPath).Text = timerToString();
 		setProblemLabel("Game Test Problem"); // TODO: Set the problem type for each respective problem
 
@@ -56,11 +51,30 @@ public partial class GameSpace : CanvasLayer
 			secondsLeft--;
 			GetNode<Label>(TimerLabelPath).Text = timerToString();
 		} else {
-			ResetTimer(10);
+			setUpTheScreen();
 			problemsSolved++;
-			setProblemLabel("Game Test Problem"); // TODO: Set the problem type for each respective problem
 			EmitSignal(SignalName.TimerFinished);
 		}
+	}
+
+	private void setUpTheScreen(){
+		ResetTimer(10);
+		setProblemLabel("Game Test Problem"); // TODO: Set the problem type for each respective problem
+		setProblemTexture("res://problems/1.png"); // TODO: Set the correct texture path for the new problem
+		setAnswerOptions("Correct", "Incorrect", "Incorrect", "Incorrect"); // TODO: Set the answer options for the new problem
+		correctAnswer = 'Y'; // TODO: Set the correct answer for the new problem
+	}
+
+	private void setProblemTexture(string texturePath) {
+		var texture2d = (Texture2D) GD.Load(texturePath);
+		GetNode<TextureRect>(ProblemContPath).Texture = texture2d;
+	}
+
+	private void setAnswerOptions(string answer1, string answer2, string answer3, string answer4) {
+		GetNode<Label>(AnswerYPath).Text = answer1;
+		GetNode<Label>(AnswerXPath).Text = answer2;
+		GetNode<Label>(AnswerBPath).Text = answer3;
+		GetNode<Label>(AnswerAPath).Text = answer4;
 	}
 
 	public void ResetTimer(int newTime = 15) {

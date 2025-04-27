@@ -178,7 +178,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_mw21s")
 theme_override_font_sizes/font_size = 35
-text = "correct one"
+text = "answer Y"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/Answer options"]
 layout_mode = 2
@@ -237,7 +237,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_mw21s")
 theme_override_font_sizes/font_size = 35
-text = "wrong"
+text = "answer X"
 
 [node name="B-Button" type="MarginContainer" parent="BoxContainer/Answer options/HBoxContainer"]
 layout_mode = 2
@@ -290,7 +290,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_mw21s")
 theme_override_font_sizes/font_size = 35
-text = "wrong"
+text = "answer B"
 
 [node name="A-Button" type="MarginContainer" parent="BoxContainer/Answer options"]
 layout_mode = 2
@@ -343,7 +343,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("2_mw21s")
 theme_override_font_sizes/font_size = 35
-text = "wrong"
+text = "answer A"
 
 [node name="Player1" parent="." instance=ExtResource("3_6oj4c")]
 position = Vector2(130, 930)
