@@ -23,6 +23,8 @@ public partial class GameSpace : CanvasLayer
 	[Export] private NodePath AnswerBPath;
 	[Export] private NodePath AnswerAPath;
 	
+	[Export] private NodePath MathDoerPath;
+	
 
 	[Signal] public delegate void TimerFinishedEventHandler();
 	[Signal] public delegate void AddPointsEventHandler(int playerId, int points);
@@ -33,12 +35,12 @@ public partial class GameSpace : CanvasLayer
 		setUpTheScreen();
 
 		GetNode<Label>(TimerLabelPath).Text = timerToString();
-		setProblemLabel("Game Test Problem"); // TODO: Set the problem type for each respective problem
+		//setProblemLabel("Game Test Problem"); // TODO: Set the problem type for each respective problem
 
 		GetNode<Timer>(TimerNodePath).Connect("timeout", new Callable(this, nameof(_on_Timer_timeout)));
 		GetNode<Timer>(TimerNodePath).Start();
 
-        GetNode<Player>(Player1NodePath).AnswerChosen += acceptAnswer;
+		GetNode<Player>(Player1NodePath).AnswerChosen += acceptAnswer;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -59,10 +61,21 @@ public partial class GameSpace : CanvasLayer
 
 	private void setUpTheScreen(){
 		ResetTimer(10);
-		setProblemLabel("Game Test Problem"); // TODO: Set the problem type for each respective problem
-		setProblemTexture("res://problems/1.png"); // TODO: Set the correct texture path for the new problem
-		setAnswerOptions("Correct", "Incorrect", "Incorrect", "Incorrect"); // TODO: Set the answer options for the new problem
-		correctAnswer = 'Y'; // TODO: Set the correct answer for the new problem
+		Node2D answer_node = GetNode<Node2D>(MathDoerPath);
+		answer_node.Call("make_problem");
+		setProblemLabel(answer_node.Get("problem").As<string>()); // TODO: Set the problem type for each respective problem
+		//setProblemTexture("res://problems/1.png"); // TODO: Set the correct texture path for the new problem
+		Godot.Collections.Array answers = answer_node.Get("answers").As<Godot.Collections.Array>();
+		int answer_number = answer_node.Get("correct_button").As<int>();
+		string[] answers_s = new string[4];
+		for (int i = 0; i < 4; i++) {
+			if (i == answer_number) {
+				correctAnswer = 'Y'; // TODO: Set the correct answer for the new problem
+			}
+			answers_s[i] = answers[i].As<string>();
+		}
+		setAnswerOptions(answers_s[0], answers_s[1], answers_s[2], answers_s[3]); // TODO: Set the answer options for the new problem
+		
 	}
 
 	private void setProblemTexture(string texturePath) {
@@ -95,7 +108,7 @@ public partial class GameSpace : CanvasLayer
 	}
 
 	private void setProblemLabel(string problemType){
-        string problemLabel = (problemsSolved + 1).ToString() + ". " + problemType;
+		string problemLabel = (problemsSolved + 1).ToString() + ". " + problemType;
 		GetNode<Label>(ProblemLabelPath).Text = problemLabel;
 	}
 }

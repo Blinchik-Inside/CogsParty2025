@@ -1,9 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1742146221
-Game Space.tscn::PackedScene::1083961184487148099::1741561533::0::1::::<><>::res://NewScript.cs
-GameSpace.cs::CSharpScript::-1::1741561533::0::1::::<><>::
-icon.svg::CompressedTexture2D::1992612037039007038::1740350471::1741551664::1::::<><>::
-main.tscn::PackedScene::6805010235454207162::1741556753::0::1::::<><>::
-NewScript.cs::CSharpScript::-1::1741560210::0::1::::<><>::
-::res://problems/::1741554703
-1.png::CompressedTexture2D::9012617538546790828::1741554656::1741554694::1::::<><>::
+::res://::1746225768
+Game Space.tscn::PackedScene::1083961184487148099::1746225736::0::1::::<><>::res://GameSpace.cs<>uid://baupkq66bjfmy::::res://Assets/comic.ttf<>uid://dm0x4xvvojps2::::res://Player.tscn<>res://node_2d.gd
+GameSpace.cs::CSharpScript::-1::1746224490::0::1::::<>CanvasLayer<>::
+icon.svg::CompressedTexture2D::9032577375382498190::1740350781::1746062942::1::::<><>::
+main.tscn::PackedScene::6805010235454207162::1746062916::0::1::::<><>::
+node_2d.gd::GDScript::-1::1746225734::0::1::::<>Node2D<>::
+Player.cs::CSharpScript::-1::1746063336::0::1::::<>Node2D<>::
+Player.tscn::PackedScene::8054587138895227203::1746062916::0::1::::<><>::uid://duhbsdsr1lvw0::::res://Player.cs<>uid://syy705w5y5ic::::res://Assets/birdbody.png<>uid://baupkq66bjfmy::::res://Assets/comic.ttf
+::res://Assets/::1746062942
+birdbody.png::CompressedTexture2D::1314459965281903082::1746062916::1746062942::1::::<><>::
+comic.ttf::FontFile::2428637741277576124::1746062916::1746062942::1::::<><>::
+::res://bin/::1746225760
+gdexample.gdextension::GDExtension::-1::1741544524::0::1::::<><>::
+::res://problems/::1746062942
+1.png::CompressedTexture2D::9012617538546790828::1746062916::1746062942::1::::<><>::
+BeeMovie.jpg::CompressedTexture2D::7564047555003204189::1746062916::1746062942::1::::<><>::
+HumptyDumpty.jpg::CompressedTexture2D::2519912182107264654::1746062916::1746062942::1::::<><>::
+Yoshi.jpeg::CompressedTexture2D::3971183366044429548::1746062916::1746062942::1::::<><>::

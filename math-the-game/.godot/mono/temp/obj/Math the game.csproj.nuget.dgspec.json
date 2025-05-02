@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\annak\\OneDrive\\Documents\\GitHub\\CogsParty2025\\math-the-game\\Math the game.csproj": {}
+    "C:\\Users\\wretl\\source\\repos\\cogs_party\\CogsParty2025\\math-the-game\\Math the game.csproj": {}
   },
   "projects": {
-    "C:\\Users\\annak\\OneDrive\\Documents\\GitHub\\CogsParty2025\\math-the-game\\Math the game.csproj": {
+    "C:\\Users\\wretl\\source\\repos\\cogs_party\\CogsParty2025\\math-the-game\\Math the game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\annak\\OneDrive\\Documents\\GitHub\\CogsParty2025\\math-the-game\\Math the game.csproj",
+        "projectUniqueName": "C:\\Users\\wretl\\source\\repos\\cogs_party\\CogsParty2025\\math-the-game\\Math the game.csproj",
         "projectName": "Math the game",
-        "projectPath": "C:\\Users\\annak\\OneDrive\\Documents\\GitHub\\CogsParty2025\\math-the-game\\Math the game.csproj",
-        "packagesPath": "C:\\Users\\annak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\annak\\OneDrive\\Documents\\GitHub\\CogsParty2025\\math-the-game\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "C:\\Users\\wretl\\source\\repos\\cogs_party\\CogsParty2025\\math-the-game\\Math the game.csproj",
+        "packagesPath": "C:\\Users\\wretl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wretl\\source\\repos\\cogs_party\\CogsParty2025\\math-the-game\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\annak\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\wretl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -45,15 +52,15 @@
           "dependencies": {
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.4.1, )"
+              "version": "[4.3.0, )"
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.4.1, )"
+              "version": "[4.3.0, )"
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.4.1, )"
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -72,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

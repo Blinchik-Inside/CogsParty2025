@@ -16,3 +16,21 @@ C:\Users\annak\OneDrive\Documents\GitHub\CogsParty2025\math-the-game\.godot\mono
 C:\Users\annak\OneDrive\Documents\GitHub\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\Math the game.pdb
 C:\Users\annak\OneDrive\Documents\GitHub\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\Math the game.genruntimeconfig.cache
 C:\Users\annak\OneDrive\Documents\GitHub\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\ref\Math the game.dll
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\bin\Debug\Math the game.deps.json
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\bin\Debug\Math the game.runtimeconfig.json
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\bin\Debug\Math the game.dll
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\bin\Debug\Math the game.pdb
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\Math the game.csproj.AssemblyReference.cache
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\Math the game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\Math the game.AssemblyInfoInputs.cache
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\Math the game.AssemblyInfo.cs
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\Math the game.csproj.CoreCompileInputs.cache
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\Math the game.sourcelink.json
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\Math the.3386C0BB.Up2Date
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\Math the game.dll
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\refint\Math the game.dll
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\Math the game.pdb
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\Math the game.genruntimeconfig.cache
+C:\Users\wretl\source\repos\cogs_party\CogsParty2025\math-the-game\.godot\mono\temp\obj\Debug\ref\Math the game.dll
